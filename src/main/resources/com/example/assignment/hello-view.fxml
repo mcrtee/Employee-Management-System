@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ComboBox?>
+<VBox spacing="10" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.assignment10.EmployeeController">
+  <TableView fx:id="employeeTable" prefHeight="300">
+    <columns>
+      <TableColumn text="Name" fx:id="nameColumn" />
+      <TableColumn text="Type" fx:id="typeColumn" />
+      <TableColumn text="Salary" fx:id="salaryColumn" />
+    </columns>
+  </TableView>
+  <HBox spacing="10">
+    <TextField fx:id="nameField" promptText="Name" />
+    <ComboBox fx:id="typeDropdown" promptText="Select Type" />
+    <TextField fx:id="hourlyRateField" promptText="Hourly Rate" />
+    <TextField fx:id="hoursField" promptText="Hours Worked/Max Hours" />
+  </HBox>
+  <HBox spacing="10">
+    <Button text="Add Employee" onAction="#addEmployee" />
+    <Button text="Calculate Salaries" onAction="#calculateSalaries" />
+  </HBox>
+</VBox>
+
